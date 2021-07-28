@@ -1,0 +1,35 @@
+@tailwind base;
+/* Write your global styles here, in PostCSS syntax */
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+        /* Southfall bold */
+    @font-face {
+        font-family: 'Southfall';
+        font-display: swap;
+        src: local('Southfall-bold'), url('/static/Southfall-bold.woff') format('woff');
+    }
+
+    /* montserrat-500 - latin */
+    @font-face {
+        font-family: 'Montserrat-500';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 500;
+        src: local('montserrat-v15-latin-500'),
+            url('/static/montserrat-v15-latin-500.woff2') format('woff2'),
+            url('/static/montserrat-v15-latin-500.woff') format('woff');
+    }
+
+    /* montserrat-800 - latin */
+    @font-face {
+        font-family: 'Montserrat-800';
+        font-style: normal;
+        font-display: swap;
+        font-weight: 800;
+        src: local('montserrat-v15-latin-800'),
+            url('/static/montserrat-v15-latin-800.woff2') format('woff2'),
+            url('/static/montserrat-v15-latin-800.woff') format('woff');
+    }
+}
