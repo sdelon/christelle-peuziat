@@ -4,32 +4,24 @@
 @tailwind utilities;
 
 @layer base {
-        /* Southfall bold */
+    /* playfair-display-regular - latin  */
     @font-face {
-        font-family: 'Southfall';
-        font-display: swap;
-        src: local('Southfall-bold'), url('/static/Southfall-bold.woff') format('woff');
-    }
-
-    /* montserrat-500 - latin */
-    @font-face {
-        font-family: 'Montserrat-500';
+        font-family: 'Playfair Display';
         font-style: normal;
         font-display: swap;
-        font-weight: 500;
-        src: local('montserrat-v15-latin-500'),
-            url('/static/montserrat-v15-latin-500.woff2') format('woff2'),
-            url('/static/montserrat-v15-latin-500.woff') format('woff');
+        font-weight: 400;
+        src: local('Playfair Display Regular'),
+            url('/static/fonts/playfair-display-v22-latin-regular.woff2') format('woff2'),
+            url('/static/fonts/playfair-display-v22-latin-regular.woff') format('woff');
     }
-
-    /* montserrat-800 - latin */
+    /* playfair-display-900 - latin */
     @font-face {
-        font-family: 'Montserrat-800';
+        font-family: 'Playfair Display';
         font-style: normal;
         font-display: swap;
-        font-weight: 800;
-        src: local('montserrat-v15-latin-800'),
-            url('/static/montserrat-v15-latin-800.woff2') format('woff2'),
-            url('/static/montserrat-v15-latin-800.woff') format('woff');
+        font-weight: 900;
+        src: local('Playfair Display Bold'),
+            url('/static/fonts/playfair-display-v22-latin-900.woff2') format('woff2'),
+            url('/static/fonts/playfair-display-v22-latin-900.woff') format('woff');
     }
 }

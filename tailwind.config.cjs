@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 const config = {
@@ -6,16 +7,24 @@ const config = {
 		"./src/**/*.{html,js,svelte,ts}",
 	],
 	theme: {
+		colors: {
+			transparent: 'transparent',
+			current: 'currentColor',
+			gray: colors.trueGray,
+			'dore-light': '#ECDFAD',
+			'dore-dark': '#D2C17F',
+			'rose-light': '#FCFAF1',
+		},
 		extend: {
 			fontFamily: {
-				'montserrat-500': "'Montserrat-500'",
-				'montserrat-800': "'Montserrat-800'",
-				southfall: "'Southfall', serif",
-				sans: ["'Inter'", ...defaultTheme.fontFamily.sans]
+				sans: ["'Inter'", ...defaultTheme.fontFamily.sans],
+				serif: ["'Playfair Display'", ...defaultTheme.fontFamily.serif]
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography')
+	],
 };
 
 module.exports = config;
