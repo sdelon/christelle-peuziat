@@ -13,7 +13,7 @@ const config = {
 			plugin:[imagetools()],
 			resolve: {
 				alias: {
-					'$svg': path.resolve('./src/lib/svg'),
+					'$svg': path.resolve('./src/lib/SVG'),
 					'$utils': path.resolve('./src/utils')
 				}
 			}
