@@ -23,7 +23,7 @@
     }
 </style>
 
-<div class="w-full {position}">
+<div class="w-full {position} relative z-10">
     {#if is_main_title}
     <h1 class="font-serif font-bold {is_dark ? 'text-rose-light' : 'text-gray-900'} {font_size} text-center">{titre}</h1>
     {:else}
