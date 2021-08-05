@@ -39,7 +39,7 @@
         {#if slice.slice_type === "qui_suis-je__"}
         <Presentation {slice}/>
         {:else if slice.slice_type === "les_soins"}
-            <div class="pb-32 md:pb-40 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 space-y-5 md:space-y-0 md:space-x-5">
+            <div class="pb-32 md:pb-40 grid grid-col-1 md:grid-cols-3 space-y-5 md:space-y-0 md:space-x-5">
                 <div class="flex flex-col space-y-6">
                     <Heading
                         titre={PrismicDom.RichText.asText(slice.primary.titre_soins)}
@@ -57,14 +57,7 @@
                 <SingleSoin {slice} idx=1/>
                 <SingleSoin {slice} idx=2/>
                 <SingleSoin {slice} idx=3/>
-                {:else if y > 768 && y < 1023}
-                <div class="md:flex flex-col space-y-5">
-                    <SingleSoin {slice} idx=0/>
-                    <SingleSoin {slice} idx=1/>
-                    <SingleSoin {slice} idx=2/>
-                    <SingleSoin {slice} idx=3/>
-                </div>
-                {:else if y > 1023}
+                {:else if y > 768}
                 <div class="space-y-5">
                     <SingleSoin {slice} idx=0/>
                     <SingleSoin {slice} idx=1/>
