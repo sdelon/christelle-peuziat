@@ -1,5 +1,6 @@
 <script>
-    export let titre, intro, is_dark, is_main_title
+    export let titre, is_dark, is_main_title, font_size
+
 </script>
 
 <style>
@@ -24,9 +25,8 @@
 
 <div class="w-full text-center">
     {#if is_main_title}
-    <h1 class="font-serif font-bold {is_dark ? 'text-rose-light' : 'text-gray-900'} text-4xl text-center">{titre}</h1>
+    <h1 class="font-serif font-bold {is_dark ? 'text-rose-light' : 'text-gray-900'} {font_size} text-center">{titre}</h1>
     {:else}
-    <h2 class="font-serif font-bold {is_dark ? 'text-rose-light' : 'text-gray-900'} text-4xl text-center">{titre}</h2>
+    <h2 class="font-serif font-bold {is_dark ? 'text-rose-light' : 'text-gray-900'} {font_size} text-center">{titre}</h2>
     {/if}
-    <p class="prose {is_dark ? 'text-rose-light' : 'text-gray-900'} mx-auto text-center">{intro}</p>
 </div>

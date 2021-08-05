@@ -4,14 +4,6 @@
     export let titre, intro, date
 </script>
 
-<style>
-    @media screen and (min-width: 200px) and (max-width: 639px) {
-        .none {
-            display: none;
-        }
-    }
-</style>
-
 <div class="w-full flex flex-col md:flex-row relative duration-300">
     <div class="relative z-10 md:w-96 lg:w-[450px] max-h-96 object-cover duration-300">
         <img class="h-52 md:h-full w-full object-cover" src={Photo} alt="illustration de l'événement">
