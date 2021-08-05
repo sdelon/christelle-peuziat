@@ -1,5 +1,5 @@
 <script>
-    export let titre, is_dark, is_main_title, font_size
+    export let titre, is_dark, is_main_title, font_size, position = "text-center"
 
 </script>
 
@@ -23,7 +23,7 @@
     }
 </style>
 
-<div class="w-full text-center">
+<div class="w-full {position}">
     {#if is_main_title}
     <h1 class="font-serif font-bold {is_dark ? 'text-rose-light' : 'text-gray-900'} {font_size} text-center">{titre}</h1>
     {:else}

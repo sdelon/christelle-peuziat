@@ -1,27 +1,43 @@
-<script>
-    import Logo from '$svg/logo-christelle.svelte'
-    import WaveHero from '$svg/wave-hero.svelte'
-    import Nautile from '/static/assets/nautile-dore-smoke.svg?format=webp&srcset'
-    import Contact from '$lib/UI/Contact.svelte'
+<script context="module">
+    export async function load({ fetch }) {
+        const { home } = await fetch('/api').then(res => res.json())
+
+        return {
+            props: {
+                home
+            }
+        }
+    }
 </script>
 
+<script>
+    import PrismicDom from 'prismic-dom'
+    import Hero from '$lib/Hero.svelte'
+    import Presentation from '$lib/Presentation.svelte'
+    import Heading from '$lib/UI/Heading.svelte'
 
-<section class="container mx-auto px-8 py-20">
-    <WaveHero/>
-    <div class="bg-gray-900 p-8 w-full h-full relative z-10">
-        <div class="max-w-md">
-            <h1 class="font-playfair-display text-3xl tracking-wide text-dore-dark">Welcome to SvelteKit</h1>
-            <p>Conveniently underwhelm B2B opportunities before world-class supply chains. Continually productivate effective benefits for standardized services.</p>
-            <div>
-                <Logo />
-            </div>
-        </div>
-        <img style="transform: scaleX(-1);" class="w-1/4 absolute -top-28 right-8" srcset={Nautile} alt="" />
-    </div>
-    <WaveHero flip="rotate-180 -mt-2"/>
+    export let home
+
+    const { data } = home
+</script>
+
+<style>
+    .citation { @apply leading-relaxed; }
+</style>
+
+<section class="-mt-16 sm:-mt-24 md:-mt-28 pb-2 duration-300">
+    <Hero {data} />
 </section>
-<section class="pb-96">
-    <Contact
-        titre="Envoyez-moi un message"
-        intro="Uniquely formulate principle-centered ROI whereas state of the art potentialities. Uniquely synthesize cross-media value before."/>
+<section class="layout-container">
+    <div class="citation max-w-lg ml-auto text-left md:text-right italic font-bold font-serif text-gray-900 text-2xl md:text-3xl duration-300">{@html PrismicDom.RichText.asHtml(data.citation)}</div>
+</section>
+<section class="layout-container py-20">
+    {#each data.body as slice}
+        {#if slice.slice_type === "qui_suis-je__"}
+        <Presentation {slice}/>
+        {/if}
+    {/each}
+</section>
+<section class="layout-container">
+    <div class="h-96"></div>
 </section>
