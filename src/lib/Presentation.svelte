@@ -7,7 +7,7 @@
     export let slice
 </script>
 
-<div class="pb-32 md:pb-40">
+<div id="a-propos" class="pb-32 md:pb-40">
     <div class="w-full flex flex-col md:flex-row relative duration-300">
         <div class="lg:absolute -top-20 left-0 z-10 w-full h-96 sm:h-full md:h-auto md:w-[350px] lg:w-[450px] xl:w-[600px] 2xl:w-[700px] object-cover object-center duration-300">
             <img class="w-full h-full object-cover lg:border-r-8 lg:border-b-8 lg:border-rose-light lg:border-solid" src={slice.primary.photo.url} alt={slice.primary.photo.alt}>

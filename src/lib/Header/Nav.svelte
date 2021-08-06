@@ -27,7 +27,7 @@
             <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/" class:active={$page.path === '/'}>Accueil</a>
         </li>
         <li class="mb-4 md:mb-0">
-            <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/" class:active={$page.path === '/#a-propos'}>À propos</a>
+            <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/#a-propos" class:active={$page.path === '/#a-propos'}>À propos</a>
         </li>
         <li class="mb-4 md:mb-0">
             <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/soins" class:active={$page.path === '/soins'}>Les soins</a>

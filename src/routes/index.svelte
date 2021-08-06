@@ -17,10 +17,15 @@
     import Heading from '$lib/UI/Heading.svelte'
     import CTASection from '$lib/UI/CTA-section.svelte'
     import SingleSoin from '$lib/UI/Single-soin.svelte'
+    import Testimonial from '$lib/UI/Testimonial.svelte'
+    import BandeauHeading from '$lib/UI/Bandeau-heading.svelte'
+    import Event from '$lib/UI/Event.svelte'
 
     export let home
     const { data } = home
     let y
+
+    // console.log(data)
 </script>
 
 <style>
@@ -32,14 +37,14 @@
     <Hero {data} />
 </section>
 <section class="layout-container">
-    <div class="citation max-w-lg ml-auto text-left md:text-right italic font-bold font-serif text-gray-900 text-2xl md:text-3xl duration-300">{@html PrismicDom.RichText.asHtml(data.citation)}</div>
+    <div class="citation max-w-lg md:ml-auto text-left md:text-right italic font-bold font-serif text-gray-800 tracking-wide text-3xl md:text-4xl duration-300">{@html PrismicDom.RichText.asHtml(data.citation)}</div>
 </section>
-<section class="layout-container py-20">
+<section class="layout-container pt-20">
     {#each data.body as slice}
         {#if slice.slice_type === "qui_suis-je__"}
         <Presentation {slice}/>
         {:else if slice.slice_type === "les_soins"}
-            <div class="pb-32 md:pb-40 grid grid-col-1 md:grid-cols-3 space-y-5 md:space-y-0 md:space-x-5">
+            <div class="pb-32 md:pb-32 grid grid-col-1 md:grid-cols-3 space-y-5 md:space-y-0 md:space-x-5">
                 <div class="flex flex-col space-y-6">
                     <Heading
                         titre={PrismicDom.RichText.asText(slice.primary.titre_soins)}
@@ -71,6 +76,34 @@
         {/if}
     {/each}
 </section>
-<section class="layout-container">
-    <div class="h-96"></div>
+<section class="w-full pb-20">
+    <div class="bg-gray-900 h-96">
+    {#each data.body as slice}
+        {#if slice.slice_type === "temoignages"}
+            <Testimonial {slice}/>
+        {/if}
+    {/each}
+    </div>
 </section>
+{#each data.body as slice}
+    {#if slice.slice_type === "nos_rendez-vous"}
+        <BandeauHeading 
+            titre={PrismicDom.RichText.asText(slice.primary.titre_agenda)}
+            intro={slice.primary.intro_agenda}
+            font_size="text-6xl"
+            is_CTA={true}
+            texte="Agenda"
+            position="text-center"
+            href="/agenda" />
+        <section class="layout-container py-20 flex flex-col space-y-16">
+        {#each slice.items as item, i}
+            <Event
+            {y}
+            is_img_left={i % 2 === 0 ? true : false}
+            date="30 septembre"
+            titre="Séminaire"
+            intro="Proactively build low-risk high-yield potentialities vis-a-vis strategic niche markets. Conveniently matrix cross-unit products through extensible solutions. Rapidiously fabricate intuitive paradigms." />
+        {/each}
+        </section>
+    {/if}
+{/each}
