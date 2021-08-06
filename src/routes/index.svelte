@@ -20,6 +20,7 @@
     import Testimonial from '$lib/UI/Testimonial.svelte'
     import BandeauHeading from '$lib/UI/Bandeau-heading.svelte'
     import Event from '$lib/UI/Event.svelte'
+    import Contact from '$lib/Contact.svelte'
 
     export let home
     const { data } = home
@@ -106,4 +107,9 @@
         {/each}
         </section>
     {/if}
+{/each}
+{#each data.body as slice}
+{#if slice.slice_type === "contact"}
+        <Contact {slice} />
+{/if}
 {/each}
