@@ -20,7 +20,7 @@
                     font_size='text-6xl'
                     position='text-left md:text-right'/>
                 <div class="flex-grow text-gray-100 prose w-full lg:max-w-md xl:max-w-lg mr-auto lg:mr-0 lg:ml-auto">{@html PrismicDom.RichText.asHtml(slice.primary.presentation)}</div>
-                <div class="inline-block w-96 h-full pb-5 mr-auto md:mr-0 md:ml-auto">
+                <div class="mr-auto md:mr-0 md:ml-auto pb-5 md:pb-0">
                     <Logo color="#D2C17F" />
                 </div>
             </div>
@@ -30,5 +30,5 @@
         position="-mt-5 md:-mt-20 mr-auto md:mr-0 md:ml-auto"
         texte={slice.primary.texte_lien_presentation}
         href="/"
-        font_size="text-3xl relative z-20" />
+        font_size="text-2xl md:text-3xl relative z-20" />
 </div>
