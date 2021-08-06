@@ -63,7 +63,7 @@
                 <SingleSoin {slice} idx=1/>
                 <SingleSoin {slice} idx=2/>
                 <SingleSoin {slice} idx=3/>
-                {:else if y > 768}
+                {:else if y >= 768}
                 <div class="space-y-5">
                     <SingleSoin {slice} idx=0/>
                     <SingleSoin {slice} idx=1/>
@@ -101,9 +101,7 @@
             <Event
             {y}
             is_img_left={i % 2 === 0 ? true : false}
-            date="30 septembre"
-            titre="Séminaire"
-            intro="Proactively build low-risk high-yield potentialities vis-a-vis strategic niche markets. Conveniently matrix cross-unit products through extensible solutions. Rapidiously fabricate intuitive paradigms." />
+            {item} />
         {/each}
         </section>
     {/if}
