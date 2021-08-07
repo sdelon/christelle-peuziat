@@ -38,6 +38,6 @@
         <li class="mb-4 md:mb-0">
             <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/faq" class:active={$page.path === '/faq'}>F.A.Q.</a>
         </li>
-        <CtaMain texte="Contact" href="/" />
+        <a sveltekit:prefetch href="/#contact" class="inline bg-dore-dark rounded-lg tracking-wide px-5 py-3 uppercase font-medium">Contact</a>
     </ul>
 </nav>

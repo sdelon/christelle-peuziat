@@ -4,6 +4,9 @@
 </script>
 
 <svelte:window bind:innerWidth={windowSize}/>
+<footer class="layout-container bg-rose-light pt-16">
+    <p>Footer</p>
+</footer>
 <div class="fixed md:hidden bottom-0 w-full h-16 bg-dore-dark flex justify-center items-center space-x-4 text-gray-900 z-50">
     <p>Menu</p>
     {#if isMobileNav}
