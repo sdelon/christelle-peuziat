@@ -15,7 +15,8 @@
     import BandeauHeading from "$lib/UI/Bandeau-heading.svelte"
     import Heading from "$lib/UI/Heading.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
-
+    import check from "/static/assets/vector-check.svg"
+    
     export let soins
 
     function changeListStyle(node) {
@@ -29,7 +30,7 @@
         }, [])
 
         if(list_items) {
-            return list_items.forEach(li => li.style.listStyle = "url('/static/assets/vector-check.svg') inside")
+            return list_items.forEach(li => li.style.listStyle = `url(${check}) inside`)
         }
 
 		return {
