@@ -16,6 +16,7 @@
     import Heading from "$lib/UI/Heading.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
     import check from "/static/assets/vector-check.svg"
+    import nautile from "/static/assets/spirale-bandeau-soins.svg"
     
     export let soins
 
@@ -85,7 +86,7 @@ border_transform="-50%" />
                 {/if}
             {/each}
             </div>
-            <img class="hidden sm:block" src="/static/assets/spirale-bandeau-soins.svg" alt="">
+            <img class="hidden sm:block" src={nautile} alt="">
             <div class="space-y-8">
             {#each slice.items as item, i}
                 {#if i >= slice.items.length / 2}
