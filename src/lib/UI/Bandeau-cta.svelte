@@ -14,7 +14,7 @@
 </style>
 
 <div class="smoke layout-container mt-20 pb-20">
-    <h2 class="font-serif text-5xl max-w-2xl mx-auto leading-tight font-bold text-center relative z-10 py-20">{accroche}</h2>
+    <h2 class="font-serif text-2xl md:text-3xl lg:text-5xl max-w-2xl mx-auto leading-tight font-bold text-center relative z-10 py-20 duration-300">{accroche}</h2>
     <CtaMain 
     texte="Prendre rendez-vous"
     href="/#contact"

@@ -9,12 +9,12 @@
         <div class="w-full h-72 absolute top-0 left-0 right-0 z-0">
             <img class="w-full h-72 object-cover" src={BgContact} alt="">
         </div>
-        <div class="flex flex-col md:flex-row justify-between">
-            <div class="container h-72 flex flex-col justify-end space-y-5 p-8 mx-auto relative z-10">
-                <h2 class="text-gray-900 font-serif text-4xl lg:text-5xl font-bold max-w-md duration-300">{PrismicDom.RichText.asText(slice.primary.titre_contact)}</h2>
+        <div class="layout-container flex flex-col md:flex-row justify-between">
+            <div class="mr-auto self-start mt-5 flex flex-col justify-end space-y-5 relative z-10">
+                <h2 class="text-gray-900 font-serif text-4xl lg:text-5xl md:leading-none font-bold max-w-md duration-300">{PrismicDom.RichText.asText(slice.primary.titre_contact)}</h2>
                 <div class="prose max-w-md">{@html PrismicDom.RichText.asHtml(slice.primary.intro_contact)}</div>
             </div>
-            <div class="w-auto mx-8 mb-20 bg-gray-900 p-5 mt-5 relative z-10">
+            <div class="w-full md:w-[600px] md:ml-12 mb-20 bg-gray-900 p-8 mt-5 relative z-10">
                 <form name="contact" method="POST" data-netlify="true" action="/merci">
                     <input type="hidden" name="form-name" value="contact">
                     <label class="text-dore-dark" for="name">

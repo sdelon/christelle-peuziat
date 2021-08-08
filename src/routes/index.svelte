@@ -51,6 +51,8 @@
                         titre={PrismicDom.RichText.asText(slice.primary.titre_soins)}
                         font_size='text-6xl'
                         position='text-left'
+                        border_left="0"
+                        border_transform="0"
                     />
                     <div>{@html PrismicDom.RichText.asHtml(slice.primary.intro_soins)}</div>
                     <CTASection 
@@ -95,7 +97,9 @@
             is_CTA={true}
             texte="Agenda"
             position="text-center"
-            href="/agenda" />
+            href="/agenda"
+            border_left="50%"
+            border_transform="-50%" />
         <section class="layout-container py-20 flex flex-col space-y-16">
         {#each slice.items as item, i}
             <Event

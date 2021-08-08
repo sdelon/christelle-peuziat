@@ -44,7 +44,9 @@
 titre={PrismicDom.RichText.asText(soins.data.titre_page)}
 intro={soins.data.intro}
 font_size="text-6xl"
-is_main_title={true} />
+is_main_title={true}
+border_left="50%"
+border_transform="-50%" />
 <section class="layout-container py-20">
     {#each soins.data.body as slice}
         {#if slice.slice_type === "soin_energetique"}
@@ -54,6 +56,8 @@ is_main_title={true} />
                     titre={PrismicDom.RichText.asText(slice.primary.titre_soin)}
                     font_size="text-3xl"
                     position="text-left"
+                    border_left="50%"
+                    border_transform="-50%" 
                 />
                 <div use:changeListStyle class="prose">{@html PrismicDom.RichText.asHtml(slice.primary.presentation)}</div>
             </div>
@@ -66,7 +70,8 @@ is_main_title={true} />
             titre={PrismicDom.RichText.asText(slice.primary.titre_section)}
             font_size="text-3xl"
             position="text-center"
-        />
+            border_left="50%"
+            border_transform="-50%" />
         <div class="prose text-center mx-w-md mx-auto pb-16">{@html PrismicDom.RichText.asHtml(slice.primary.intro_section)}</div>
         <div class="grid grid-cols-1 space-y-12 sm:space-y-0 sm:grid-cols-3 mb-20">
             <div class="space-y-12">
@@ -96,7 +101,8 @@ is_main_title={true} />
             titre={PrismicDom.RichText.asText(slice.primary.titre_section)}
             font_size="text-3xl"
             position="text-center"
-        />
+            border_left="50%"
+            border_transform="-50%" />
         <div class="prose text-center mx-w-md mx-auto pb-16">{@html PrismicDom.RichText.asHtml(slice.primary.intro_section)}</div>
         <div class="grid grid-cols-1 md:grid-cols-3 space-y-10 md:space-y-0 md:space-x-10">
             {#each slice.items as item}
@@ -119,7 +125,8 @@ is_main_title={true} />
             is_dark={true}
             font_size="text-5xl"
             position="text-center pb-12"
-            />
+            border_left="50%"
+            border_transform="-50%" />
         <div class="layout-container grid grid-cols-1 md:grid-cols-2 space-y-10 md:space-y-0 md:space-x-10">
             {#each slice.items as item}
                 <div>

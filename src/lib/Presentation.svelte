@@ -18,7 +18,9 @@
                     titre={PrismicDom.RichText.asText(slice.primary.titre_presentation)}
                     is_dark={true}
                     font_size='text-6xl'
-                    position='text-left md:text-right'/>
+                    position='text-left md:text-right'
+                    border_left="0"
+                    border_transform="0" />
                 <div class="flex-grow text-gray-100 prose w-full lg:max-w-md xl:max-w-lg mr-auto lg:mr-0 lg:ml-auto">{@html PrismicDom.RichText.asHtml(slice.primary.presentation)}</div>
                 <div class="mr-auto md:mr-0 md:ml-auto pb-5 md:pb-0">
                     <Logo color="#D2C17F" />
