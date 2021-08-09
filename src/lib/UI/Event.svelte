@@ -10,7 +10,7 @@
 
 {#if is_img_left || !is_img_left && y <= 767}
 <div id={is_last_event} class="w-full flex flex-col md:flex-row relative duration-300">
-    <div class="relative z-10 md:w-96 lg:w-[450px] xl:w-[600px] md:max-h-80 max-h-96 object-cover duration-300 md:mb-40 {!is_home_page && is_last_event ? 'md:mb-5 lg:mb-5' : 'lg:mb-24'}">
+    <div class="relative z-10 md:w-96 lg:w-[450px] xl:w-[600px] md:max-h-80 max-h-96 object-cover duration-300 md:mb-40 {!is_home_page && is_last_event ? 'md:mb-5 lg:mb-12' : 'lg:mb-24'}">
         <img class="h-72 md:h-full w-full object-cover" src={event.photo.url} alt="illustration de l'événement">
         <div class="hidden sm:flex flex-col justify-center items-center sm:absolute sm:-bottom-12 md:bottom-0 sm:right-0 md:-right-5 lg:-right-12 bg-dore-dark w-32 h-32 duration-300">
             <p class="font-serif font-bold text-6xl pb-4">{getDay(event.date_debut)}</p>
@@ -48,7 +48,7 @@
             href="/agenda/{event.uid}" />
         </div>
     </div>
-    <div class="relative z-10 md:ml-auto md:w-96 lg:w-[450px] xl:w-[600px] md:max-h-80 max-h-96 object-cover duration-300 {!is_home_page && is_last_event ? 'md:mb-5 lg:mb-5' : 'lg:mb-24'}">
+    <div class="relative z-10 md:ml-auto md:w-96 lg:w-[450px] xl:w-[600px] md:max-h-80 max-h-96 object-cover duration-300 {!is_home_page && is_last_event ? 'md:mb-5 lg:mb-12' : 'lg:mb-24'}">
         <img class="h-52 md:h-full w-full object-cover" src={event.photo.url} alt="illustration de l'événement">
         <div class="hidden sm:flex flex-col justify-center items-center sm:absolute sm:-bottom-12 md:bottom-0 sm:left-0 md:-left-5 lg:-left-12 bg-dore-dark w-32 h-32 duration-300">
             <p class="font-serif font-bold text-6xl pb-4">{getDay(event.date_debut)}</p>

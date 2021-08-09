@@ -15,7 +15,7 @@
     import PrismicDom from "prismic-dom"
     import BandeauHeading from "$lib/UI/Bandeau-heading.svelte"
     import Event from "$lib/UI/Event.svelte"
-    import BtnReadMore from "$lib/UI/btn-read-more.svelte"
+    import BtnReadMore from "$lib/UI/Btn-read-more.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
     import nautile from '/static/assets/nautile-dore-smoke.png'
 
