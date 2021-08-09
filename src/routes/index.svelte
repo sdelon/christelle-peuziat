@@ -101,11 +101,12 @@
             border_left="50%"
             border_transform="-50%" />
         <section class="layout-container py-20 flex flex-col space-y-16">
-        {#each slice.items as item, i}
+        {#each slice.items as event, i}
             <Event
+            is_home_page={true}
             {y}
             is_img_left={i % 2 === 0 ? true : false}
-            {item} />
+            {event} />
         {/each}
         </section>
     {/if}

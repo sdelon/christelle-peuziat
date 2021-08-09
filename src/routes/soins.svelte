@@ -16,8 +16,9 @@
     import Heading from "$lib/UI/Heading.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
     import check from "/static/assets/vector-check.svg"
-    import nautile from "/static/assets/spirale-bandeau-soins.svg"
-    
+    import spirale_bandeau_soins from "/static/assets/spirale-bandeau-soins.svg"
+    import nautile from "/static/assets/nautile-dore-smoke.png"
+
     export let soins
 
     function changeListStyle(node) {
@@ -86,7 +87,7 @@ border_transform="-50%" />
                 {/if}
             {/each}
             </div>
-            <img class="hidden sm:block" src={nautile} alt="">
+            <img class="hidden sm:block" src={spirale_bandeau_soins} alt="">
             <div class="space-y-8">
             {#each slice.items as item, i}
                 {#if i >= slice.items.length / 2}
@@ -109,7 +110,7 @@ border_transform="-50%" />
         <div class="grid grid-cols-1 md:grid-cols-3 space-y-10 md:space-y-0 md:space-x-10">
             {#each slice.items as item}
                 <div>
-                    <img src="/static/assets/nautile-dore-smoke.png" alt="nautile logo"/>
+                    <img class="pb-2" src={nautile} alt="nautile logo"/>
                     <h3 class="font-bold text-xl text-gray-800">{PrismicDom.RichText.asText(item.titre_competence)}</h3>
                     <div class="prose">{@html PrismicDom.RichText.asHtml(item.descriptif)}</div>
                 </div>
