@@ -28,7 +28,7 @@
         <h2 class="font-serif text-5xl font-bold tracking-wide max-w-md mx-auto">{PrismicDom.RichText.asText(faq.data.accroche)}</h2>
     </div>
 </section>
-<section class="max-w-2xl mx-4 sm:mx-auto mt-32 pb-20 space-y-10">
+<section class="max-w-2xl mx-4 sm:mx-auto sm:mt-28 md:mt-32 pb-20 space-y-10">
     {#each faq.data.body as slice}
     {#if slice.slice_type === "question_reponse"}
         {#each slice.items as item}
