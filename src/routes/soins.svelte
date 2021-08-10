@@ -121,7 +121,7 @@ border_transform="-50%" />
 </section>
 {#each soins.data.body as slice}
     {#if slice.slice_type === "tarifs"}
-<section class="w-full h-auto bg-gray-900">
+<section id="tarifs" class="w-full h-auto bg-gray-900">
     <div class="py-16">
         <Heading
             titre={PrismicDom.RichText.asText(slice.primary.titre_tarifs)}

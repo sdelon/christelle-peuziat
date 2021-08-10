@@ -25,8 +25,6 @@
     export let home
     const { data } = home
     let y
-
-    // console.log(data)
 </script>
 
 <style>

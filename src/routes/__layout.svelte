@@ -5,7 +5,7 @@
 </script>
 
 <Header />
-<main class="bg-rose-light">
+<main>
 	<slot />
 </main>
 <Footer />
