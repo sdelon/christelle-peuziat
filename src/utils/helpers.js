@@ -57,3 +57,23 @@ export const getMonth = (date) => {
     let month = months.filter(m => m.id === date.split('-')[1])
     return month[0].mois
 }
+
+export function scrollTo(node, params) {
+    const [link, path] = params
+    let target = document.querySelector(`${link}`)
+
+    function scrollToTarget(e) {
+        if(path !== '/') return
+
+        if(e) e.preventDefault()
+        target.scrollIntoView({behavior: "smooth"})
+    }
+
+    node.addEventListener('click', scrollToTarget)
+
+    return {
+        onDestroy() {
+            node.removeEventListener('click', scrollToTarget)
+        }
+    }
+}

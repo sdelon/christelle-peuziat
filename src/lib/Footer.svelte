@@ -1,17 +1,18 @@
 <script>
     import { page } from '$app/stores'
+    import { scrollTo } from '$utils/helpers'
     import MobileNav from '$lib/Header/Mobile-nav.svelte'
     import Wave from '$lib/SVG/wave-hero.svelte'
     import spirale from '/static/assets/spirale.svg'
     import icon_Fb from '/static/assets/icon-library.svg#icon-facebook'
     import icon_Instagram from '/static/assets/icon-library.svg#icon-instagram'
 
-    let isMobileNav = false, windowSize
+    let isMobileNav = false, windowSize, windowHeight
 
     $: year = new Date().getFullYear()
 </script>
 
-<svelte:window bind:innerWidth={windowSize}/>
+<svelte:window bind:innerWidth={windowSize} bind:innerHeight={windowHeight}/>
 
 <Wave flip="relative z-10 {$page.path === '/' ? 'pt-60 md:pt-3' : 'pt-3'}" />
 <footer class="w-full bg-gray-900">
@@ -22,6 +23,7 @@
         <div class="h-full lg:col-start-2 lg:col-span-2 flex flex-col justify-between text-dore-light">
             <div>
                 <h3 class="font-bold text-lg">Christelle Peuziat</h3>
+                <h4 class="">Médium . Magnétiseuse . Psycho-énergéticienne</h4>
                 <p class="font-thin">62 bis rue de Locqueran</p>
                 <p class="font-thin">29780 Plouhinec</p>
             </div>
@@ -35,7 +37,7 @@
                     <a sveltekit:prefetch href="/">Accueil</a>
                 </li>
                 <li class="font-thin pr-5 sm:pr-0">
-                    <a sveltekit:prefetch href="/#a-propos">À propos</a>
+                    <a use:scrollTo={['#a-propos', $page.path]} sveltekit:prefetch href="/#a-propos">À propos</a>
                 </li>
                 <li class="font-thin pr-5 sm:pr-0">
                     <a sveltekit:prefetch href="/soins">Les soins</a>
@@ -74,8 +76,9 @@
         </div>
     </div>
     <div class="layout-container mt-8 font-thin text-dore-light flex items-center py-5">
-        <p class="font-thin text-sm"><span>© {year} christellepeuziat.com</span> - Design et conception: <a href="https://sdelon.com/">sdelon </a>| <a class="font-light" href="/mentions-legales">Mentions légales</a> | <a class="font-light" sveltekit:prefetch href="/#contact">Contact</a></p>
-        <div class="ml-auto w-10 h-10 rounded-full bg-dore-light flex items-center justify-center animate-pulse cursor-pointer">
+        <p class="font-thin text-sm"><span>© {year} christellepeuziat.com</span> - Design et conception: <a href="https://sdelon.com/">sdelon </a>| <a class="font-light" href="/mentions-legales">Mentions légales</a> | <a class="font-light" use:scrollTo={['#contact', $page.path]} sveltekit:prefetch href="/#contact">Contact</a></p>
+        <div
+        on:click={() => console.log(windowHeight)} class="ml-auto w-10 h-10 rounded-full bg-dore-light flex items-center justify-center animate-pulse cursor-pointer">
             <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18"></path></svg>
         </div>
     </div>
