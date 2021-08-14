@@ -11,6 +11,8 @@
 </script>
 
 <script>
+    import { inview } from 'svelte-inview'
+    import { fly } from 'svelte/transition'
     import PrismicDom from 'prismic-dom'
     import Hero from '$lib/Hero.svelte'
     import Presentation from '$lib/Presentation.svelte'
@@ -24,7 +26,12 @@
 
     export let home
     const { data } = home
-    let y
+    let y, is_in_view = false
+
+    const options = {
+        rootMargin: '10px',
+        unobserveOnEnter: true,
+    }
 </script>
 
 <style>
@@ -35,8 +42,10 @@
 <section class="-mt-16 sm:-mt-24 md:-mt-28 pb-2 duration-300">
     <Hero {data} />
 </section>
-<section class="layout-container">
-    <div class="citation max-w-lg md:ml-auto text-left md:text-right italic font-bold font-serif text-gray-800 tracking-wide text-3xl md:text-4xl duration-300">{@html PrismicDom.RichText.asHtml(data.citation)}</div>
+<section use:inview={options} on:change={e => is_in_view = e.detail.inView} class="layout-container">
+    {#if is_in_view}
+    <div in:fly="{{ x: 200, duration: 2000 }}" class="citation max-w-lg md:ml-auto text-left md:text-right italic font-bold font-serif text-gray-800 tracking-wide text-3xl md:text-4xl duration-300">{@html PrismicDom.RichText.asHtml(data.citation)}</div>
+    {/if}
 </section>
 <section class="layout-container pt-20">
     {#each data.body as slice}

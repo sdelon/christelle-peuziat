@@ -1,8 +1,6 @@
 <script>
     import { page } from '$app/stores'
     import { createEventDispatcher } from 'svelte'
-    import { scrollTo } from '$utils/helpers'
-
 
     const dispatch = createEventDispatcher()
     export let direction, color
@@ -28,7 +26,7 @@
             <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/" class:active={$page.path === '/'}>Accueil</a>
         </li>
         <li class="mb-4 md:mb-0">
-            <a use:scrollTo={['#a-propos', $page.path]} sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/#a-propos" class:active={$page.path === '/#a-propos'}>À propos</a>
+            <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/#a-propos" class:active={$page.path === '/#a-propos'}>À propos</a>
         </li>
         <li class="mb-4 md:mb-0">
             <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/soins" class:active={$page.path === '/soins'}>Les soins</a>
@@ -39,6 +37,6 @@
         <li class="mb-4 md:mb-0">
             <a sveltekit:prefetch on:click={() => dispatch('clickMobileItem')} class="{color} uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300" href="/faq" class:active={$page.path === '/faq'}>F.A.Q.</a>
         </li>
-        <a use:scrollTo={['#contact', $page.path]} sveltekit:prefetch href="/#contact" class="inline bg-dore-dark rounded-lg tracking-wide px-5 py-3 uppercase font-medium">Contact</a>
+        <a sveltekit:prefetch href="/#contact" class="inline bg-dore-dark rounded-lg tracking-wide px-5 py-3 uppercase font-medium">Contact</a>
     </ul>
 </nav>
