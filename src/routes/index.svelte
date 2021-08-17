@@ -95,7 +95,7 @@ alt={home.data.body[0].primary.photo.alt} />
     {/each}
 </section>
 <section class="w-full pb-20">
-    <div class="bg-gray-900 h-96">
+    <div class="bg-gray-900 h-[600px] sm:h-[550px] md:h-[450px] lg:h-96 duration-300">
     {#each data.body as slice}
         {#if slice.slice_type === "temoignages"}
             <Testimonial {slice}/>

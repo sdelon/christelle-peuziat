@@ -95,7 +95,9 @@ border_transform="-50%" />
                 {/if}
             {/each}
             </div>
-            <img class="hidden sm:block" src={spirale_bandeau_soins} alt="">
+            <div class="hidden sm:block h-[600px] w-full">
+                <img class="w-full h-full object-contain" src={spirale_bandeau_soins} alt="">
+            </div>
             <div class="space-y-8">
             {#each slice.items as item, i}
                 {#if i >= slice.items.length / 2}

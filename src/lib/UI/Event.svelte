@@ -1,6 +1,7 @@
 <script>
     import PrismicDom from 'prismic-dom'
     import { page } from '$app/stores'
+    import Image from '$lib/UI/Image.svelte'
     import CTASection from '$lib/UI/CTA-section.svelte'
     import { getDay, getMonth } from '$utils/helpers'
 
@@ -14,6 +15,12 @@
 <div id={is_last_event} class="w-full flex flex-col md:flex-row relative duration-300">
     <div class="relative z-10 md:w-96 lg:w-[450px] xl:w-[600px] md:max-h-80 max-h-96 object-cover duration-300 md:mb-28 {!is_home_page && is_last_event ? 'md:mb-5 lg:mb-12' : 'lg:mb-24'}">
         <img class="h-72 md:h-full w-full object-cover" src={event.photo.url} alt="illustration de l'événement">
+        <!-- <Image
+        src={event.photo.url}
+        alt={event.photo.alt}
+        width={event.photo.dimensions.width}
+        height={event.photo.dimensions.height}
+        styles="h-52 w-full object-cover" /> -->
         <div class="hidden sm:flex flex-col justify-center items-center sm:absolute sm:-bottom-12 md:bottom-0 sm:right-0 md:-right-5 lg:-right-12 bg-dore-dark w-32 h-32 duration-300">
             <p class="font-serif font-bold text-6xl pb-4">{getDay(event.date_debut)}</p>
             <p class="text-light uppercase tracking-widest">{getMonth(event.date_debut)}</p>
@@ -54,6 +61,12 @@
     </div>
     <div class="relative z-10 md:ml-auto md:w-96 lg:w-[450px] xl:w-[600px] md:max-h-80 max-h-96 object-cover md:mb-28 duration-300 {!is_home_page && is_last_event ? 'md:mb-5 lg:mb-12' : 'lg:mb-24'}">
         <img class="h-52 md:h-full w-full object-cover" src={event.photo.url} alt="illustration de l'événement">
+        <!-- <Image
+        src={event.photo.url}
+        alt={event.photo.alt}
+        width={event.photo.dimensions.width}
+        height={event.photo.dimensions.height}
+        styles="h-52 w-full object-cover" /> -->
         <div class="hidden sm:flex flex-col justify-center items-center sm:absolute sm:-bottom-12 md:bottom-0 sm:left-0 md:-left-5 lg:-left-12 bg-dore-dark w-32 h-32 duration-300">
             <p class="font-serif font-bold text-6xl pb-4">{getDay(event.date_debut)}</p>
             <p class="text-light uppercase tracking-widest">{getMonth(event.date_debut)}</p>
