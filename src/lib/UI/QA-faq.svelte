@@ -1,5 +1,6 @@
 <script>
     import PrismicDom from "prismic-dom"
+    import { fly } from 'svelte/transition'
 
     export let item
 
@@ -19,6 +20,6 @@
         </svg>
     </div>
     {#if is_open}
-    <div class="prose">{@html PrismicDom.RichText.asHtml(item.reponse)}</div>
+    <div in:fly={{y: 50, duration: 300}} out:fly={{duration: 50}} class="prose">{@html PrismicDom.RichText.asHtml(item.reponse)}</div>
     {/if}
 </div>
