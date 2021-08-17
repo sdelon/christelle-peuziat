@@ -33,22 +33,22 @@
             <p class="font-bold">Menu</p>
             <ul class="flex flex-wrap sm:flex-col items-center sm:items-end lg:items-start sm:space-y-3">
                 <li class="font-thin sm:pt-3 pr-5 sm:pr-0">
-                    <a sveltekit:prefetch href="/">Accueil</a>
+                    <a class="pr-2 py-4" sveltekit:prefetch href="/">Accueil</a>
                 </li>
                 <li class="font-thin pr-5 sm:pr-0">
-                    <a sveltekit:prefetch href="/#a-propos">À propos</a>
+                    <a class="pr-2 py-4" sveltekit:prefetch href="/#a-propos">À propos</a>
                 </li>
                 <li class="font-thin pr-5 sm:pr-0">
-                    <a sveltekit:prefetch href="/soins">Les soins</a>
+                    <a class="pr-2 py-4" sveltekit:prefetch href="/soins">Les soins</a>
                 </li>
                 <li class="font-thin pr-5 sm:pr-0">
-                    <a sveltekit:prefetch href="/agenda">Nos rendez-vous</a>
+                    <a class="pr-2 py-4" sveltekit:prefetch href="/agenda">Nos rendez-vous</a>
                 </li>
                 <li class="font-thin pr-5 sm:pr-0">
-                    <a sveltekit:prefetch href="/soins#tarifs">Tarifs</a>
+                    <a class="pr-2 py-4" sveltekit:prefetch href="/soins#tarifs">Tarifs</a>
                 </li>
                 <li class="font-thin pr-5 sm:pr-0">
-                    <a sveltekit:prefetch href="/faq">F.A.Q.</a>
+                    <a class="pr-2 py-4" sveltekit:prefetch href="/faq">F.A.Q.</a>
                 </li>
             </ul>
         </div>
