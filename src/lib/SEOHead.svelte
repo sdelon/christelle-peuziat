@@ -1,6 +1,6 @@
 <script>
     import { page } from '$app/stores'
-    export let title, description, image, alt
+    export let title, description, image, alt, src_to_preload
 
     $: url = `https://${$page.host}${$page.path}`
 </script>
@@ -11,7 +11,7 @@
     <meta name="robots" content="index,follow">
 
     <link rel="canonical" href={url}>
-
+    {#if src_to_preload}<link rel="preload" as="image" href={src_to_preload}/>{/if}
     <!-- Facebook Open Graph -->
     <meta property="og:url" content={url}>
     <meta property="og:type" content="website">

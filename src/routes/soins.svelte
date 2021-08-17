@@ -12,6 +12,7 @@
 
 <script>
     import PrismicDom from "prismic-dom"
+    import SeoHead from "$lib/SEOHead.svelte"
     import BandeauHeading from "$lib/UI/Bandeau-heading.svelte"
     import Heading from "$lib/UI/Heading.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
@@ -42,6 +43,13 @@
 		}
 	}
 </script>
+
+<SeoHead 
+src_to_preload={soins.data.body[0].primary.image.url}
+title="Les soins | Christelle Peuziat"
+description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse - médium- psycho-énergéticienne | Christelle Peuziat"
+image=""
+alt="" />
 
 <BandeauHeading 
 titre={PrismicDom.RichText.asText(soins.data.titre_page)}

@@ -12,12 +12,19 @@
 
 <script>
     import PrismicDom from "prismic-dom"
+    import SeoHead from "$lib/SEOHead.svelte"
     import spirale from "/static/assets/spirale.svg"
     import QA from "$lib/UI/QA-faq.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
 
     export let faq
 </script>
+
+<SeoHead 
+title="Foire Aux Questions | Christelle Peuziat"
+description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse - médium- psycho-énergéticienne | Christelle Peuziat"
+image=""
+alt="" />
 
 <section class="layout-container relative overflow-hidden">
     <div class="mx-auto sm:pl-14 rotate-90 sm:scale-150 md:scale-[2] max-w-screen h-96 w-80 sm:w-96 opacity-25 duration-300">

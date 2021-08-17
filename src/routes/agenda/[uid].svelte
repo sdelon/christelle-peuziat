@@ -12,6 +12,7 @@
 
 <script>
     import PrismicDom from "prismic-dom"
+    import SeoHead from "$lib/SEOHead.svelte"
     import { getDay, getMonth } from '$utils/helpers'
     import BandeauCta from "$lib/UI/Bandeau-cta.svelte"
 
@@ -26,6 +27,12 @@
         transform: translateX(-50%);
     }
 </style>
+
+<SeoHead 
+title="{PrismicDom.RichText.asText(event.data.titre)} | Christelle Peuziat"
+description="{PrismicDom.RichText.asText(event.data.extrait_description)} | Christelle Peuziat"
+image="{event.data.photo.url}"
+alt="{event.data.photo.alt}" />
 
 <section class="layout-container relative py-20">
     <div class="w-full h-72 md:h-80 lg:h-96 duration-300 mb-8">

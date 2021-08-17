@@ -13,6 +13,7 @@
 
 <script>
     import PrismicDom from "prismic-dom"
+    import SeoHead from "$lib/SEOHead.svelte"
     import BandeauHeading from "$lib/UI/Bandeau-heading.svelte"
     import Event from "$lib/UI/Event.svelte"
     import BtnReadMore from "$lib/UI/Btn-read-more.svelte"
@@ -22,6 +23,12 @@
     export let agenda, events
     let y, currentEvents = 1
 </script>
+
+<SeoHead 
+title="Nos rendez-vous | Christelle Peuziat"
+description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse - médium- psycho-énergéticienne | Christelle Peuziat"
+image=""
+alt="" />
 
 <svelte:window bind:innerWidth={y}/>
 

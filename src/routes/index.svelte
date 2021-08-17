@@ -14,6 +14,7 @@
     import { inview } from 'svelte-inview'
     import { fly } from 'svelte/transition'
     import PrismicDom from 'prismic-dom'
+    import SeoHead from '$lib/SEOHead.svelte'
     import Hero from '$lib/Hero.svelte'
     import Presentation from '$lib/Presentation.svelte'
     import Heading from '$lib/UI/Heading.svelte'
@@ -37,6 +38,13 @@
 <style>
     .citation { @apply leading-relaxed; }
 </style>
+
+<SeoHead 
+src_to_preload={home.data.image.url}
+title="Accueil | Christelle Peuziat"
+description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse - médium- psycho-énergéticienne | Christelle Peuziat"
+image={home.data.body[0].primary.photo.url}
+alt={home.data.body[0].primary.photo.alt} />
 
 <svelte:window bind:innerWidth={y}/>
 <section class="-mt-16 sm:-mt-24 md:-mt-28 pb-2 duration-300">
