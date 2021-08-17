@@ -38,7 +38,8 @@ border_transform="-50%" />
         is_last_event={i === events.length - 1 ? true : false}
         {y}
         is_img_left={i % 2 === 0 ? true : false}
-        {event} />
+        {event}
+        event_link={event.uid} />
     {/each}
     {#if currentEvents < events.length}
         <BtnReadMore 

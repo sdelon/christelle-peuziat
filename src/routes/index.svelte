@@ -65,7 +65,7 @@
                     <CTASection 
                     texte={slice.primary.texte_lien_soins}
                     href="/soins"
-                    font_size="text-xl" />
+                    font_size="text-2xl" />
                 </div>
                 {#if y < 768}
                 <SingleSoin {slice} idx=0/>

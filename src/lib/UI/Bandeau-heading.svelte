@@ -14,7 +14,7 @@
         <div class="max-w-lg mx-auto space-y-4">
             <Heading {titre} is_dark={true} {is_main_title} {font_size} {border_left} {border_transform} />
             <div class="text-center {is_dark ? 'text-rose-light' : 'text-gray-900'}">{@html PrismicDom.RichText.asHtml(intro)}</div>
-            {#if is_CTA}<CTASection {texte} {href} {position} />{/if}
+            {#if is_CTA}<CTASection {texte} {href} {position} font_size="text-xl"/>{/if}
         </div>
     </div>
 </section>
