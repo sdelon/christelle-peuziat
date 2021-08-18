@@ -22,7 +22,7 @@ export async function get() {
         return !filters.find(filter => page.includes(filter))
     })
     .map(page => {
-        return page.replace('/src/routes', import.meta.env.VITE_PUBLIC_BASE_PATH).replace('/index.svelte', '').replace('.svelte', '')
+        return page.replace('/src/routes', 'https://christellepeuziat.netlify.app').replace('/index.svelte', '').replace('.svelte', '')
     })
 
     const allSiteURL = [await getPosts(), pages]
@@ -31,7 +31,7 @@ export async function get() {
         let node = {
             loc: `${currItem}`,
 			priority: '1.0',
-			changefreq: 'weekly',
+			changefreq: 'monthly',
 			date
         }
         newArr.push(node)
