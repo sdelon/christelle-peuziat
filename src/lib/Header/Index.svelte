@@ -11,7 +11,8 @@
         <div class="hidden md:block w-full">
             <Nav
             direction="flex-row justify-between items-center"
-            color="text-gray-900" />
+            link_style="uppercase hover:border-b-2 hover:border-solid hover:border-dore-dark transition-colors duration-300 text-gray-900"
+            contact_style="inline bg-dore-dark rounded-lg tracking-wide px-5 py-3 uppercase font-medium" />
         </div>
     </div>
 </header>
