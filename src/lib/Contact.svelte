@@ -1,6 +1,5 @@
 <script>
     import PrismicDom from 'prismic-dom'
-    import BgContact from '/static/assets/bg-contact.svg'
     export let slice
 </script>
 
