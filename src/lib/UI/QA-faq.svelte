@@ -7,7 +7,7 @@
     let is_open
 </script>
 
-<div class="mb-8 shadow-lg p-5">
+<div aria-selected={is_open ? true : false} class="mb-8 shadow-lg p-5">
     <div on:click={() => is_open = !is_open} class="flex w-full justify-between items-center text-gray-900 {is_open ? 'pb-8' : 'pb-0'} cursor-pointer">
         <h3 class="font-medium w-4/5">{PrismicDom.RichText.asText(item.question)}</h3>
         <svg 

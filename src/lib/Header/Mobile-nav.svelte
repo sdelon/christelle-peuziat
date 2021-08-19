@@ -24,5 +24,4 @@ class="md:hidden z-40 fixed inset-0 h-full transition-transform overflow-y-auto 
     position="top-10 right-0"
     on:clickMobileItem />
 </div>
-
 </aside>

@@ -13,18 +13,18 @@
             </div>
             <div class="w-full md:w-[600px] md:ml-12 mb-20 bg-gray-900 p-8 mt-5 relative z-10 shadow-lg">
                 <form name="contact" method="POST" data-netlify="true" action="/merci">
-                    <input type="hidden" name="form-name" value="contact">
+                    <input type="hidden" name="form-name" value="contact" aria-hidden="true">
                     <label class="text-dore-dark" for="name">
                         Nom
-                        <input class="bg-dore-dark w-full py-3 pl-3 mt-1 mb-4 rounded focus:outline-none focus:ring-1 focus:ring-dore-light focus:ring-offset-2 focus:ring-offset-gray-900" type="text" name="nom" required aria-required="true">
+                        <input class="bg-dore-dark w-full py-3 pl-3 mt-1 mb-4 rounded focus:outline-none focus:ring-1 focus:ring-dore-light focus:ring-offset-2 focus:ring-offset-gray-900" type="text" name="nom" id="name" required aria-required="true">
                     </label>
                     <label class="text-dore-dark" for="email">
                         Email
-                        <input class="bg-dore-dark w-full py-3 pl-3 mt-1 mb-4 rounded focus:outline-none focus:ring-1 focus:ring-dore-light focus:ring-offset-2 focus:ring-offset-gray-900" type="email" name="email" required aria-required="true">
+                        <input class="bg-dore-dark w-full py-3 pl-3 mt-1 mb-4 rounded focus:outline-none focus:ring-1 focus:ring-dore-light focus:ring-offset-2 focus:ring-offset-gray-900" type="email" name="email" id="email" required aria-required="true">
                     </label>
                     <label class="text-dore-dark" for="message">
                         Message
-                        <textarea class="bg-dore-dark mt-1 mb-4 w-full p-3 rounded focus:outline-none focus:ring-1 focus:ring-dore-light focus:ring-offset-2 focus:ring-offset-gray-900" id="1" name="message" cols="30" rows="10" required aria-required="true"></textarea>
+                        <textarea class="bg-dore-dark mt-1 mb-4 w-full p-3 rounded focus:outline-none focus:ring-1 focus:ring-dore-light focus:ring-offset-2 focus:ring-offset-gray-900" id="message" name="message" cols="30" rows="10" required aria-required="true"></textarea>
                     </label>
                     <button type="submit" class="bg-dore-dark w-full inline-block px-6 py-3 mr-4 text-gray-900 font-bold leading-loose rounded transition duration-200 uppercase focus:outline-none focus:ring-1 focus:ring-dore-light focus:ring-offset-2 focus:ring-offset-gray-900">Envoyer</button>
                 </form>

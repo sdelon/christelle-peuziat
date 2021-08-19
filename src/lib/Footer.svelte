@@ -17,7 +17,7 @@
 <footer class="w-full bg-gray-900 pb-12 md:pb-0">
     <div class="layout-container h-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
         <div class="hidden sm:block w-32 h-auto sm:w-full sm:h-full">
-            <img src={spirale} alt="logo">
+            <img src={spirale} alt="Christelle Peuziat logo">
         </div>
         <div class="h-full lg:col-start-2 lg:col-span-2 flex flex-col justify-between text-dore-light">
             <div>
