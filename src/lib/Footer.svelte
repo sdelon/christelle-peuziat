@@ -81,18 +81,18 @@
 
 <div class="fixed md:hidden bottom-0 w-full h-16 bg-dore-dark flex justify-center items-center space-x-12 sm:space-x-20 text-gray-900 z-50 duration-300">
     {#if isMobileNav}
-        <div class="flex items-center space-x-4">
-            <svg on:click={() => isMobileNav = !isMobileNav} class="w-6 h-6 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <div aria-label="Fermer" on:click={() => isMobileNav = !isMobileNav} class="flex items-center space-x-4 cursor-pointer">
+            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             <p>Menu</p>
         </div>
     {:else}
-        <div>
-            <svg on:click={() => isMobileNav = !isMobileNav} class="w-6 h-6 cursor-pointer mx-auto text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <div aria-label="Ouvrir" class="cursor-pointer" on:click={() => isMobileNav = !isMobileNav}>
+            <svg aria-hidden="true" class="w-6 h-6 mx-auto text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             <p class="text-sm text-gray-800">Menu</p>
         </div>
         <div>
             <a sveltekit:prefetch href="/#contact" class="inline-block text-sm">
-                <svg class="w-6 h-6 cursor-pointer mx-auto text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
+                <svg aria-hidden="true" class="w-6 h-6 cursor-pointer mx-auto text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
                 <span class="text-gray-800">Contact</span>
             </a>
         </div>

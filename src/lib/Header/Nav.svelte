@@ -6,9 +6,6 @@
     export let direction, link_style, contact_style
 
     const set_aria_current = (node, current_page) => {
-        let not_anchor = current_page.split('#').length > 1
-        if(not_anchor) current_page = '/'
-
         if($page.path === current_page) node.ariaCurrent = "page"
     }
     
