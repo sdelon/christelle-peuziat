@@ -26,7 +26,7 @@
                 <p class="font-thin">62 bis rue de Locqueran</p>
                 <p class="font-thin">29780 Plouhinec</p>
             </div>
-            <div class="font-thin"><a class="underline" href="tel:06.77.63.18.43">06.77.63.18.43</a></div>
+            <div class="font-thin"><a class="underline block h-12" href="tel:06.77.63.18.43">06.77.63.18.43</a></div>
             <div class="font-thin"><a class="underline" href="mailto:christelle.peuziat2210@gmail.com">christelle.peuziat2210@gmail.com</a></div>
         </div>
         <div class="col-span-full sm:col-span-1 text-dore-light sm:text-right lg:text-left mt-10 sm:mt-0">
