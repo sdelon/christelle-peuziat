@@ -38,9 +38,9 @@
         decoding="async"
         {width} 
         {height} 
-        alt={alt || "Scène de vie dans le Village Aux Dames"} 
+        alt={alt || "Evénement organisé par Christelle Peuziat"} 
         class="{styles}">
     {:else}
-        <img src={placeholder(src)} {width} {height} alt={alt || "Scène de vie dans le Village Aux Dames"} class="{styles}">
+        <img src={placeholder(src)} {width} {height} alt={alt || "Evénement organisé par Christelle Peuziat"} class="{styles}">
     {/if}
 </div>
