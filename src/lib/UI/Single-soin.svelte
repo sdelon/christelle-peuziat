@@ -1,6 +1,6 @@
 <script>
     import PrismicDom from 'prismic-dom'
-    import Spirale from '/static/assets/spirale.svg?format=webp&srcset'
+    import Spirale from '../../../static/assets/spirale.svg?format=webp&srcset'
     export let slice, idx
 </script>
 

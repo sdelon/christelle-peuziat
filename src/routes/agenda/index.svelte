@@ -48,12 +48,14 @@ border_transform="-50%" />
         {event}
         event_link={event.uid} />
     {/each}
-    {#if currentEvents < events.length}
-        <BtnReadMore 
-        {currentEvents}
-        nbOfPostsToLoad=6 />
-    {/if}
 </section>
+<div class="w-full mx-auto pt-28 lg:pt-40 pb-16 text-center">
+    {#if currentEvents < events.length}
+    <BtnReadMore 
+    {currentEvents}
+    nbOfPostsToLoad=6 />
+    {/if}
+</div>
 <section class="layout-container pt-16 pb-8 lg:pb-12 grid grid-cols-1 md:grid-cols-3 space-y-10 md:space-y-0 md:space-x-10">
     {#each agenda.data.body as slice}
     {#if slice.slice_type === "details_pratiques_des_evenements"}

@@ -15,9 +15,9 @@
         display:inline-block; 
         position:absolute; 
         left: 0;
-        bottom:10px; 
-        width:100%; 
-        height:10px;
+        bottom: 5px; 
+        width: 100%; 
+        height: 8px;
         z-index: -1;
         background-color: #D2C17F;
     }
