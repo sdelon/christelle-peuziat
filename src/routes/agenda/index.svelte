@@ -18,7 +18,7 @@
     import Event from "$lib/UI/Event.svelte"
     import BtnReadMore from "$lib/UI/Btn-read-more.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
-    import nautile from '../../static/assets/nautile-dore-smoke.png'
+    import nautile from '../../../static/assets/nautile-dore-smoke.png'
 
     export let agenda, events
     let y, currentEvents = 1
