@@ -1,6 +1,5 @@
 <script>
     import PrismicDom from "prismic-dom"
-    import { fly } from 'svelte/transition'
 
     export let item
 

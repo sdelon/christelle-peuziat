@@ -2,7 +2,7 @@
     import { page } from '$app/stores'
     import MobileNav from '$lib/Header/Mobile-nav.svelte'
     import Wave from '$lib/SVG/wave-hero.svelte'
-    import spirale from '/static/assets/spirale.svg'
+    import spirale from '../../static/assets/spirale.svg'
     import FbIcon from '$lib/SVG/facebook_logo_icon.svelte'
     import InstagramIcon from '$lib/SVG/instagram_logo_icon.svelte'
 

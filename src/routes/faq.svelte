@@ -13,7 +13,7 @@
 <script>
     import PrismicDom from "prismic-dom"
     import SeoHead from "$lib/SEOHead.svelte"
-    import spirale from "/static/assets/spirale.svg"
+    import spirale from "../../static/assets/spirale.svg"
     import QA from "$lib/UI/QA-faq.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
 

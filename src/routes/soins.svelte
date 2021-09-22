@@ -16,9 +16,9 @@
     import BandeauHeading from "$lib/UI/Bandeau-heading.svelte"
     import Heading from "$lib/UI/Heading.svelte"
     import BandeauCTA from "$lib/UI/Bandeau-cta.svelte"
-    import check from "/static/assets/vector-check.svg"
-    import spirale_bandeau_soins from "/static/assets/spirale-bandeau-soins.svg"
-    import nautile from "/static/assets/nautile-dore-smoke.png"
+    import check from "../../static/assets/vector-check.svg"
+    import spirale_bandeau_soins from "../../static/assets/spirale-bandeau-soins.svg"
+    import nautile from "../../static/assets/nautile-dore-smoke.png"
 
     export let soins
 
@@ -84,7 +84,7 @@ border_transform="-50%" />
             border_left="50%"
             border_transform="-50%" />
         <div class="prose text-center mx-w-md mx-auto pb-16">{@html PrismicDom.RichText.asHtml(slice.primary.intro_section)}</div>
-        <div class="grid grid-cols-1 space-y-12 sm:space-y-0 sm:grid-cols-3 mb-20">
+        <div class="grid grid-cols-1 space-y-12 sm:space-y-0 sm:grid-cols-3 items-center mb-20">
             <div class="space-y-12">
             {#each slice.items as item, i}
                 {#if i < slice.items.length / 2}
@@ -119,10 +119,12 @@ border_transform="-50%" />
         <div class="prose text-center mx-w-md mx-auto pb-16">{@html PrismicDom.RichText.asHtml(slice.primary.intro_section)}</div>
         <div class="grid grid-cols-1 md:grid-cols-3 space-y-10 md:space-y-0 md:space-x-10">
             {#each slice.items as item}
-                <div>
-                    <img class="pb-2" src={nautile} alt="nautile logo"/>
-                    <h3 class="font-bold text-xl text-gray-800">{PrismicDom.RichText.asText(item.titre_competence)}</h3>
-                    <div class="prose">{@html PrismicDom.RichText.asHtml(item.descriptif)}</div>
+                <div class="flex md:flex-col space-x-4 md:space-x-0 items-start">
+                    <img class="pb-2 w-20 object-contain" src={nautile} alt="nautile logo"/>
+                    <div>
+                        <h3 class="font-bold text-xl text-gray-800">{PrismicDom.RichText.asText(item.titre_competence)}</h3>
+                        <div class="prose">{@html PrismicDom.RichText.asHtml(item.descriptif)}</div>
+                    </div>
                 </div>
             {/each}
         </div> 
