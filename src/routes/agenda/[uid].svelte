@@ -37,7 +37,7 @@ alt="{event.data.photo.alt}" />
 
 <section class="layout-container relative py-20">
     <div class="w-full h-72 md:h-80 lg:h-96 duration-300 mb-8">
-        <h1 class="font-serif font-bold text-5xl text-gray-900 pb-2">{PrismicDom.RichText.asText(event.data.titre)}</h1>
+        <h1 class="font-serif font-bold text-5xl text-gray-900 pb-12">{PrismicDom.RichText.asText(event.data.titre)}</h1>
         <Image
         src={event.data.photo.url}
         alt={event.data.photo.url}

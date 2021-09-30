@@ -14,7 +14,6 @@
 {#if is_img_left || !is_img_left && y <= 767}
 <div id={is_last_event} class="w-full flex flex-col md:flex-row relative duration-300">
     <div class="relative z-10 md:w-96 lg:w-[450px] xl:w-[600px] md:max-h-80 max-h-96 object-cover duration-300 md:mb-28 {!is_home_page && is_last_event ? 'md:mb-5 lg:mb-12' : 'lg:mb-24'}">
-        <!-- <img class="h-72 md:h-full w-full object-cover" src={event.photo.url} alt="illustration de l'événement"> -->
         <Image
         src={event.photo.url}
         alt={event.photo.alt}
@@ -33,8 +32,8 @@
             <p>{getMonth(event.date_debut)}</p>
         </div>
         <div class="w-full md:w-64 lg:w-96 lg:h-80 ml-auto flex flex-col justify-center space-y-10 md:text-right duration-300">
-            <h2 class="text-gray-100 font-serif text-5xl font-bold">{PrismicDom.RichText.asText(event.titre)}</h2>
-            <div class="text-gray-100 prose flex-grow">{@html PrismicDom.RichText.asHtml(event.extrait_description)}</div>
+            <h2 class="text-gray-100 font-serif text-4xl font-bold">{PrismicDom.RichText.asText(event.titre)}</h2>
+            <div class="text-gray-100 text-sm leading-relaxed tracking-wide flex-grow">{@html PrismicDom.RichText.asHtml(event.extrait_description)}</div>
             <CTASection
             position="mr-auto md:mr-0 md:ml-auto"
             font_size="text-xl"
@@ -51,8 +50,8 @@
             <p>{getMonth(event.date_debut)}</p>
         </div>
         <div class="w-full md:w-64 lg:w-96 lg:h-80 mr-auto flex flex-col justify-center space-y-10 md:text-left duration-300">
-            <h2 class="text-gray-100 font-serif text-5xl font-bold">{PrismicDom.RichText.asText(event.titre)}</h2>
-            <div class="text-gray-100 prose flex-grow">{@html PrismicDom.RichText.asHtml(event.extrait_description)}</div>
+            <h2 class="text-gray-100 font-serif text-4xl font-bold">{PrismicDom.RichText.asText(event.titre)}</h2>
+            <div class="text-gray-100 text-sm leading-relaxed tracking-wide flex-grow">{@html PrismicDom.RichText.asHtml(event.extrait_description)}</div>
             <CTASection
             position="ml-auto md:mlr-0 md:mr-auto"
             texte="En savoir plus"

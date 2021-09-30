@@ -48,7 +48,7 @@
 </style>
 
 <nav>
-    <ul class="lg:max-w-screen-lg mx-auto flex {direction} list-reset text-sm md:space-x-2 lg:space-x-16">
+    <ul class="layout-container mx-auto flex {direction} list-reset text-sm md:space-x-2 lg:space-x-16">
         {#each list_items as item}
         <li class="mb-4 md:mb-0">
             <a 
