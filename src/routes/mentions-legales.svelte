@@ -1,4 +1,4 @@
-<section class="max-w-4xl mx-auto space-y-8 py-20 px-8 text-gray-900">
+<section class="max-w-4xl mx-auto space-y-8 py-16 px-8 text-gray-900">
     <h1 class="font-bold text-3xl">Mentions légales</h1>
     <div>
         <h3 class="font-bold text-xl">Le site Internet</h3>
