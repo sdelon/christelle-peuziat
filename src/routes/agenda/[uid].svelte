@@ -52,5 +52,5 @@ alt="{event.data.photo.alt}" />
 </section>
 <article class="layout-container py-20 prose">{@html PrismicDom.RichText.asHtml(event.data.description)}</article>
 <BandeauCta 
-accroche="Vous souhaitez participer à cet événement, alors réserver dès maintenant votre place"
+accroche="Vous souhaitez participer à cet événement, alors réservez dès maintenant votre place"
 texte="Réservez votre place" />
