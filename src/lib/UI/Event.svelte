@@ -21,7 +21,7 @@
         height={event.photo.dimensions.height}
         container_styles="h-72 w-full object-cover"
         styles="h-72 w-full object-cover" />
-        <div class="hidden sm:flex flex-col justify-center items-center sm:absolute sm:-bottom-12 md:bottom-0 sm:right-0 md:-right-5 lg:-right-12 bg-dore-dark w-32 h-32 duration-300">
+        <div class="hidden sm:flex flex-col justify-center items-center sm:absolute bottom-0 sm:right-0 md:-right-5 lg:-right-12 bg-dore-dark w-32 h-32 duration-300">
             <p class="font-serif font-bold text-6xl pb-4">{getDay(event.date_debut)}</p>
             <p class="text-light uppercase tracking-widest">{getMonth(event.date_debut)}</p>
         </div>
@@ -32,7 +32,7 @@
             <p>{getMonth(event.date_debut)}</p>
         </div>
         <div class="w-full md:w-64 lg:w-96 lg:h-80 ml-auto flex flex-col justify-center space-y-10 md:text-right duration-300">
-            <h2 class="text-gray-100 font-serif text-4xl font-bold">{PrismicDom.RichText.asText(event.titre)}</h2>
+            <h2 class="text-gray-100 font-serif text-3xl lg:text-4xl font-bold">{PrismicDom.RichText.asText(event.titre)}</h2>
             <div class="text-gray-100 text-sm leading-relaxed tracking-wide flex-grow">{@html PrismicDom.RichText.asHtml(event.extrait_description)}</div>
             <CTASection
             position="mr-auto md:mr-0 md:ml-auto"
@@ -68,7 +68,7 @@
         height={event.photo.dimensions.height}
         container_styles="h-72 w-full object-cover"
         styles="h-72 w-full object-cover" />
-        <div class="hidden sm:flex flex-col justify-center items-center sm:absolute sm:-bottom-12 md:bottom-0 sm:left-0 md:-left-5 lg:-left-12 bg-dore-dark w-32 h-32 duration-300">
+        <div class="hidden sm:flex flex-col justify-center items-center sm:absolute bottom-0 sm:left-0 md:-left-5 lg:-left-12 bg-dore-dark w-32 h-32 duration-300">
             <p class="font-serif font-bold text-6xl pb-4">{getDay(event.date_debut)}</p>
             <p class="text-light uppercase tracking-widest">{getMonth(event.date_debut)}</p>
         </div>
