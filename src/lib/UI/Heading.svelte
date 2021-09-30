@@ -1,6 +1,5 @@
 <script>
     export let titre, is_dark, is_main_title, font_size, position = "text-center", border_left, border_transform
-
 </script>
 
 <style>
