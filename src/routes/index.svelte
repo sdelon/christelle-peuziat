@@ -1,5 +1,5 @@
 <script context="module">
-    const prerender = true
+    export const prerender = true
     export async function load({ fetch }) {
         const { home } = await fetch('/api').then(res => res.json())
 
