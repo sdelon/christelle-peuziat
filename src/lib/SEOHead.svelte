@@ -2,7 +2,8 @@
     import { page } from '$app/stores'
     export let title, description, image, alt, src_to_preload
 
-    $: url = `https://${$page.host}${$page.path}`
+    // $: url = `https://${$page.host}${$page.path}`
+    $: url = 'https://christellepeuziat.com/'
 </script>
 
 <svelte:head>
