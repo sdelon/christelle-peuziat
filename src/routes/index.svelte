@@ -136,7 +136,7 @@ alt={home.data.body[0].primary.photo.alt} />
                         <h2 class="text-gray-900 font-serif text-4xl lg:text-5xl md:leading-none font-bold max-w-md duration-300">{PrismicDom.RichText.asText(slice.primary.titre_contact)}</h2>
                         <div class="prose max-w-md">{@html PrismicDom.RichText.asHtml(slice.primary.intro_contact)}</div>
                     </div>
-                    <div class="w-full md:w-[600px] md:ml-12 mb-20 bg-gray-900 p-8 mt-5 relative z-10 shadow-lg">
+                    <div class="w-full md:w-[600px] md:ml-12 mb-20 bg-gray-900 p-8 mt-5 relative z-50 shadow-lg">
                         <form name="contact" method="POST" data-netlify="true" action="/merci">
                             <input type="hidden" name="form-name" value="contact" aria-hidden="true">
                             <label class="text-dore-dark" for="name">
