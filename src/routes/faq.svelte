@@ -21,8 +21,8 @@
 </script>
 
 <SeoHead 
-title="Foire Aux Questions | Christelle Peuziat"
-description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse - médium- psycho-énergéticienne | Christelle Peuziat"
+title="Foire Aux Questions soins énergétiques | Christelle Peuziat thérapeute"
+description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse, médium, psycho-énergéticienne | Christelle Peuziat thérapeute"
 image=""
 alt="" />
 

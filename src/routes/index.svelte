@@ -41,8 +41,8 @@
 
 <SeoHead 
 src_to_preload={home.data.image.url}
-title="Accueil | Christelle Peuziat"
-description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse - médium- psycho-énergéticienne | Christelle Peuziat"
+title="Thérapeute en soins énergétiques dans le Finistère | Christelle Peuziat"
+description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse, médium et psycho-énergéticienne dans le Cap Sizun en Finistère | Christelle Peuziat thérapeute"
 image={home.data.body[0].primary.photo.url}
 alt={home.data.body[0].primary.photo.alt} />
 

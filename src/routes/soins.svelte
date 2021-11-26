@@ -46,8 +46,8 @@
 
 <SeoHead 
 src_to_preload={soins.data.body[0].primary.image.url}
-title="Les soins | Christelle Peuziat"
-description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse - médium- psycho-énergéticienne | Christelle Peuziat"
+title="Les soins énergétiques | Christelle Peuziat thérapeute"
+description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse, médium, psycho-énergéticienne | Christelle Peuziat thérapeute"
 image=""
 alt="" />
 

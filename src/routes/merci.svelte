@@ -7,7 +7,7 @@
 </script>
 
 <SEOHead
-    title="Merci pour votre message | Christelle Peuziat"
+    title="Merci pour votre message | Christelle Peuziat thérapeute"
 	description="Passer de l'ombre à la lumière avec Christelle Peuziat - magnétiseuse - médium- psycho-énergéticienne | Christelle Peuziat" />
 
 
