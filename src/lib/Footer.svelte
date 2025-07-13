@@ -71,7 +71,7 @@
         </div>
     </div>
     <div class="layout-container mt-8 font-thin text-dore-light flex items-center py-5">
-        <p class="font-thin text-sm"><span>© {year} christellepeuziat.com</span> - Design et conception: <a href="https://sdelon.com/">sdelon </a>| <a class="font-light" href="/mentions-legales">Mentions légales</a> | <a class="font-light" sveltekit:prefetch href="/#contact">Contact</a></p>
+        <p class="font-thin text-sm"><span>© {year} christellepeuziat.com</span> - Design et conception: <a href="https://stephaniedelon.com/">Stéphanie Delon </a>| <a class="font-light" href="/mentions-legales">Mentions légales</a> | <a class="font-light" sveltekit:prefetch href="/#contact">Contact</a></p>
         <div
         on:click={() => window.scrollTo(0,0)} class="ml-auto w-10 h-10 rounded-full bg-dore-light flex items-center justify-center animate-pulse cursor-pointer">
             <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18"></path></svg>
