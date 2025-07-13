@@ -23,8 +23,8 @@
             <div>
                 <h3 class="font-bold text-lg">Christelle Peuziat</h3>
                 <h4 class="">Médium . Magnétiseuse . Psycho-énergéticienne</h4>
-                <p class="font-thin">62 bis rue de Locqueran</p>
-                <p class="font-thin">29780 Plouhinec</p>
+                <p class="font-thin">14 rue de Pont L'abbé</p>
+                <p class="font-thin">29710 Plozevet</p>
             </div>
             <div class="font-thin"><a class="underline block h-12" href="tel:06.77.63.18.43">06.77.63.18.43</a></div>
             <div class="font-thin"><a class="underline block h-12" href="mailto:christelle.peuziat2210@gmail.com">christelle.peuziat2210@gmail.com</a></div>
